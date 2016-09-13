@@ -16,7 +16,7 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-using System;
+using Consul.Models;
 using System.Threading;
 using System.Threading.Tasks;
 

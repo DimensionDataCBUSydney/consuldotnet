@@ -16,63 +16,13 @@
 //  </copyright>
 // -----------------------------------------------------------------------
 
-using Newtonsoft.Json;
+using Consul.Models;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Consul
 {
-    public class Node
-    {
-        // Cannot be "Node" as in the Go API because in C#, properties cannot
-        // have the same name as their enclosing class.
-        [JsonProperty(PropertyName = "Node")]
-        public string Name { get; set; }
-        public string Address { get; set; }
-    }
-
-    public class CatalogService
-    {
-        public string Node { get; set; }
-        public string Address { get; set; }
-        public string ServiceID { get; set; }
-        public string ServiceName { get; set; }
-        public string ServiceAddress { get; set; }
-        public string[] ServiceTags { get; set; }
-        public int ServicePort { get; set; }
-        public bool ServiceEnableTagOverride { get; set; }
-    }
-
-    public class CatalogNode
-    {
-        public Node Node { get; set; }
-        public Dictionary<string, AgentService> Services { get; set; }
-
-        public CatalogNode()
-        {
-            Services = new Dictionary<string, AgentService>();
-        }
-    }
-
-    public class CatalogRegistration
-    {
-        public string Node { get; set; }
-        public string Address { get; set; }
-        public string Datacenter { get; set; }
-        public AgentService Service { get; set; }
-        public AgentCheck Check { get; set; }
-    }
-
-    public class CatalogDeregistration
-    {
-        public string Node { get; set; }
-        public string Address { get; set; }
-        public string Datacenter { get; set; }
-        public string ServiceID { get; set; }
-        public string CheckID { get; set; }
-    }
-
     /// <summary>
     /// Catalog can be used to query the Catalog endpoints
     /// </summary>

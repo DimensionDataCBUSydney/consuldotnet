@@ -72,6 +72,11 @@
     <Compile Include="Interfaces\IRawEndpoint.cs" />
     <Compile Include="Interfaces\ISessionEndpoint.cs" />
     <Compile Include="Interfaces\IStatusEndpoint.cs" />
+    <Compile Include="Models\CatalogDeregistration.cs" />
+    <Compile Include="Models\CatalogNode.cs" />
+    <Compile Include="Models\CatalogRegistration.cs" />
+    <Compile Include="Models\CatalogService.cs" />
+    <Compile Include="Models\Node.cs" />
     <Compile Include="PreparedQuery.cs" />
     <Compile Include="Utilities\JsonConverters.cs" />
     <Compile Include="KV.cs" />
